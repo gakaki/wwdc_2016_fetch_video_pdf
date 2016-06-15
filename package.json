@@ -1,0 +1,31 @@
+{
+  "name": "async-await",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "set_npm_taobao": "npm config set registry http://registry.cnpmjs.org;npm info underscore;",
+    "fetch": "babel index.js -d build && node build/index.js",
+    "start":"npm run set_npm_taobao;npm install -g babel-cli;npm install;npm run fetch;",
+    "getlinks": "babel getlinks.js -d build && node build/getlinks.js"
+  },
+  "keywords": [
+    "babel",
+    "async",
+    "await"
+  ],
+  "author": "singno",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "request": "^2.72.0",
+    "superagent": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.8.0",
+    "babel-plugin-syntax-async-functions": "^6.8.0",
+    "babel-plugin-transform-regenerator": "^6.8.0",
+    "babel-preset-es2015": "^6.8.0",
+    "babel-runtime": "^6.8.0"
+  }
+}
